@@ -1,0 +1,33 @@
+/*
+  作者：181910720孙海龙
+  测试目的：测试符号类型的错误使用
+
+  错误1:  子函数中使用a，但a已经被定义为常量
+  错误2:  sum2尚未定义
+  错误3:  主函数中使用a，但a已经被定义为常量
+  错误4:  主函数中使用sum1，但sum1是过程名
+*/
+program xi;
+const a:=5;
+var j,sum,x;
+	procedure sum1(x);
+	var j;
+	begin
+		j:=1;
+		a:=1;
+		sum2:=1;
+		while j<=x do             
+		begin
+			sum:=sum+j;
+			j:=j+1                
+		end;
+		write(sum)
+	end
+begin
+	read(a);  
+	read(sum1);
+	write(a);
+	read(j);
+	write(j);
+	call sum1(j+5)
+end

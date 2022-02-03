@@ -1,0 +1,31 @@
+/*
+  作者：181910720孙海龙
+  测试目的：测试循环函数
+  正确输入：
+	3 (6)
+  正确输出：
+	23 (16)
+*/
+program shl;
+const a:=20,b:=10;
+var c,d,e,flag;
+	procedure shl1(k);
+	var sum;
+	begin
+		sum:=20;
+		while k>=0 do
+		begin
+			if odd k then          //是奇数和加加 
+				sum:=sum+k
+			else 
+				sum:=sum-k;       //是偶数和减减 
+			k:=k-1
+		end;
+		flag:=sum
+	end
+begin
+	read(c);
+	e:=c+2;
+	call shl1(e);   
+	write(flag)
+end

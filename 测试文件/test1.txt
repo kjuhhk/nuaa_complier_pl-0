@@ -1,0 +1,35 @@
+/*
+  作者：181910720孙海龙
+  测试目的：测试递归
+  正确输入：
+	无输入
+  正确输出：
+	1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 10946 17711 28657 46368 75025 121393 196418 317811 514229 832040
+*/
+program fibonacci;                 //斐波那契数列  
+const index:=30;
+var return,i;
+procedure fib(x);
+var sum;
+begin
+    sum:=0;
+    if x<2 then
+        return:=x
+    else
+    begin
+        call fib(x-1);
+        sum:=sum+return;
+        call fib(x-2);
+        sum:=sum+return;
+        return:=sum
+    end
+end
+begin
+    i:=1;
+    while i<=index do                //循环30次 
+    begin
+        call fib(i);
+        write(return);
+        i:=i+1                      //每次更新i
+    end
+end

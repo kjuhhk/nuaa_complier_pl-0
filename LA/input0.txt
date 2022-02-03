@@ -1,0 +1,33 @@
+program xi;
+const a:=15,b:=26;
+var c,d;
+    procedure readarray(b,c);
+    const e:=7;
+    var f;
+    begin
+        write(b);
+        write(c);
+        write(a);
+        f:=7;
+        write(f);
+        c:=2;
+        write(c);
+        d:=f-c;
+        write(d);
+        if -5>6 then f:=c+d else f:=c/d;
+
+        write(f);
+        while -5>c do
+        begin
+            c:=6
+        end;
+        read(c);
+        write(c+b);
+        write(c)
+
+    end
+begin
+    call readarray(a,b);
+    write(a);
+    write(b)
+end

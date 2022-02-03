@@ -1,0 +1,43 @@
+/*
+  作者：181910720孙海龙
+  测试目的：中间代码优化
+  正确输入：
+	无输入
+  正确输出：
+	1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 10946 17711 28657 46368 75025 121393 196418 317811 514229 832040
+*/
+program Add;
+const m :=20;
+var a,b,c,d,e,f;
+	procedure add(h,q);                //求两者之和 
+	var sum,return;
+	begin
+		sum:=0;
+		sum:=q+h;
+		sum:=sum+1;
+		return:=sum;
+		write(h+q)
+	end;
+	procedure sum1(x);               //求自然数前x相和 
+	var j,sum;
+	begin
+		j:=1;
+		a:=1;
+		sum:=0;
+		while j<=x do
+		begin
+			sum:=sum+j;
+			j:=j+1
+		end;
+		write(sum)
+	end
+begin
+	read(a);
+	write(a);
+	read(e);
+	write(e);
+	read(f);
+	write(f);
+	call sum1(a);
+	call add(e,f)
+end

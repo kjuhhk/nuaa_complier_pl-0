@@ -1,0 +1,6 @@
+progam hhh;
+    const er:3, te:=a, tt:=3;
+    vr hhh;
+begin
+    aaa:=26;
+end

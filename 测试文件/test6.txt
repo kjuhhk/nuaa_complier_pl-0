@@ -1,0 +1,52 @@
+/*
+  作者：181910720孙海龙
+  测试目的：测试重复定义，调用函数参数不匹配，使用未定义符号
+
+  错误1:  重复定义变量x
+  错误2:  变量m尚未定义
+  错误3:  变量i尚未定义
+  错误4:  变量i尚未定义
+  错误5:  主函数调用j，但变量j只在子程序定义
+  错误6:  主函数调用j，但变量j只在子程序定义
+  错误7:  sum1只要传一个参数，但是调用时传了两个参数，传参个数不匹配
+  错误8:  主函数调用j，但变量j只在子程序定义
+*/
+
+program xi;
+const a:=5;
+var sum,x,x;
+	procedure sum1(x);
+	var j;
+	begin
+		m:=1;
+		j:=1;
+		i:=2;
+		sum:=0;
+		while j<=x do
+		begin
+			sum:=sum+j;
+			j:=j+1
+		end;
+		write(sum)
+	end;
+	procedure sum2(x);
+	var j,m;
+	begin
+		j:=1;
+		i:=2;
+		sum:=0;
+		while j<=x do
+		begin
+			sum:=sum+j;
+			j:=j+1
+		end;
+		write(sum)
+	end
+
+begin
+	read(x);        
+	write(x);
+	read(j);                       
+	call sum1(j+1,2);
+	write(j)	
+end

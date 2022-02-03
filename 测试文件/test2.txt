@@ -1,0 +1,32 @@
+/*
+	作者：181910720孙海龙
+	测试目的：测试多参数传参数
+  正确输入：
+	101 305 42
+  正确输出：
+	549 3
+*/
+program Add;
+const index:=20;
+var return,a,b,c,sum;
+	procedure add(a,b,c);           //求三者之和 
+	var sum;
+	begin
+		sum:=0;
+		sum:=a+b;
+		sum:=sum+c;
+		return:=sum
+	end;
+	procedure add1(a,b,c);
+	begin
+		sum:=3
+	end
+begin
+	read(a);                       //从控制台读入数据 
+	read(b);
+	read(c);
+	call add(b+a,a,c);            //多参数传递 
+	call add1(a,b,c);
+	write(return);               //控制台输出 
+	write(sum)
+end
